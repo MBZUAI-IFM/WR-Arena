@@ -1,0 +1,99 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# =========================
+# Environment / virtual env
+# =========================
+.env
+.env.*
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Logs & debug
+# =========================
+*.log
+logs/
+*.out
+*.err
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Models / checkpoints
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+**/checkpoints/** 
+!**/checkpoints/ 
+!**/checkpoints/README.md
+
+# =========================
+# Outputs / experiments
+# =========================
+outputs/
+results/
+runs/
+logs/
+wandb/
+mlruns/
+
+# =========================
+# Media
+# =========================
+*.mp4
+*.avi
+*.mov
+*.gif
+
+# =========================
+# Archives / large files
+# =========================
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.npy
+*.npz
+
+# =========================
+# Temporary
+# =========================
+tmp/
+temp/
+*.tmp
+
+# =========================
+# Cache
+# =========================
+.cache/
+cache/
