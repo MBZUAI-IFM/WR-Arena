@@ -1,0 +1,542 @@
+[
+    {
+      "id": "agent_000_1",
+      "image_path": "initial_state/000.png",
+      "prompt_list": [
+        "A man in a leather jacket walks steadily towards the toll booth, his shadow stretching behind him as he approaches the stationed car.",
+        "The man crosses the lane, moving between the stationary cars, his pace unhurried as he navigates through the traffic.",
+        "Reaching the other side, he turns left, walking alongside the line of parked vehicles, each one casting long shadows in the afternoon sun."
+      ]
+    },
+    {
+      "id": "agent_000_2",
+      "image_path": "initial_state/000.png",
+      "prompt_list": [
+        "The man stands still for a moment, observing the cars passing through the toll booth before beginning to walk forward.",
+        "He steps off the curb, weaving through the moving traffic with calculated precision, each step measured and deliberate.",
+        "Upon reaching the opposite side, he pauses again, watching the flow of vehicles, his figure framed against the towering bridge in the distance."
+      ]
+    },
+    {
+      "id": "agent_000_3",
+      "image_path": "initial_state/000.png",
+      "prompt_list": [
+        "A man in a black jacket turns sharply to his right, heading towards the edge of the road where a car idles nearby.",
+        "He speeds up, jogging past the toll booths, his footsteps echoing softly in the open space.",
+        "Reaching the waiting car, he slows down, moving around it to inspect the front before continuing his path along the sidewalk."
+      ]
+    },
+    {
+      "id": "env_000_4",
+      "image_path": "initial_state/000.png",
+      "prompt_list": [
+        "The toll booth casts a long shadow across the road as the sun sets, illuminating the towering bridge in the background.",
+        "As the light fades, the bridge's structure becomes a silhouette against the deepening sky, while the toll booth lights flicker on, casting a warm glow.",
+        "The road, now glistening under the streetlights, reveals the textured surface of the asphalt as it stretches towards the horizon."
+      ]
+    },
+    {
+      "id": "env_000_5",
+      "image_path": "initial_state/000.png",
+      "prompt_list": [
+        "The road is wide and empty under the towering bridge, with the toll booth standing sentry at the side.",
+        "Gradually, the bridge begins to cast longer shadows over the road as the sun dips lower, creating a pattern of light and dark.",
+        "In the distance, the bridge's lights flicker on, illuminating the intricate web of cables and steel against the twilight sky."
+      ]
+    },
+    {
+      "id": "env_000_6",
+      "image_path": "initial_state/000.png",
+      "prompt_list": [
+        "The toll booth is framed by the massive columns of the overhead bridge, its windows reflecting the afternoon light.",
+        "As the hours pass, the sunlight shifts, casting dynamic shadows across the toll booth and the surrounding road.",
+        "Eventually, the bridge looms in the gathering dusk, its structure silhouetted against the fading light while the road falls into shadow."
+      ]
+    },
+    {
+      "id": "agent_001_1",
+      "image_path": "initial_state/001.png",
+      "prompt_list": [
+        "A police officer stands beside a patrol car in the station parking lot, shifting his position to lean against the vehicle as the sun casts long shadows across the pavement.",
+        "The officer begins to walk away from the patrol car, moving towards the entrance of the building with purposeful strides.",
+        "Reaching the doorway, the officer turns back to glance at the patrol car before stepping inside the building."
+      ]
+    },
+    {
+      "id": "agent_001_2",
+      "image_path": "initial_state/001.png",
+      "prompt_list": [
+        "The patrol car is parked neatly in the station lot, a police officer standing nearby with a watchful gaze.",
+        "With a swift turn, the officer approaches the patrol car, opening the door to check inside.",
+        "Satisfied, the officer closes the door and begins to patrol the perimeter of the lot, scanning the surroundings."
+      ]
+    },
+    {
+      "id": "agent_001_3",
+      "image_path": "initial_state/001.png",
+      "prompt_list": [
+        "A police officer stands beside a parked patrol car, adjusting his belt as the sun sets behind the building.",
+        "The officer walks around the patrol car, inspecting its condition before heading towards the station's main entrance.",
+        "He steps inside the building, leaving the patrol car behind in the fading light."
+      ]
+    },
+    {
+      "id": "env_001_4",
+      "image_path": "initial_state/001.png",
+      "prompt_list": [
+        "Tall palm trees sway gently in the breeze against a mural-covered building, casting intricate shadows on the ground.",
+        "As the sun moves lower in the sky, the shadows of the palm trees stretch longer, merging with the vibrant colors of the mural.",
+        "The mural on the building becomes more vivid in the dusk light, while the palm trees stand silhouetted against the evening sky."
+      ]
+    },
+    {
+      "id": "env_001_5",
+      "image_path": "initial_state/001.png",
+      "prompt_list": [
+        "The building stands firm with a colorful mural adorning its facade, and an American flag fluttering in the light breeze.",
+        "Gradually, the colors of the mural deepen as the sun sets, while the flag continues to wave gently.",
+        "The mural's details become a focal point under the streetlights, and the flag is now softly illuminated against the night sky."
+      ]
+    },
+    {
+      "id": "env_001_6",
+      "image_path": "initial_state/001.png",
+      "prompt_list": [
+        "The parking lot is bathed in warm sunlight, with palm trees lining the perimeter and casting shadows on the concrete.",
+        "As the sun starts to dip, the light shifts to a golden hue, creating a serene atmosphere around the parking lot.",
+        "The parking lot becomes a tranquil scene as the last rays of sunlight fade, leaving the palm trees outlined against the twilight."
+      ]
+    },
+    {
+      "id": "agent_002_1",
+      "image_path": "initial_state/002.png",
+      "prompt_list": [
+        "A large rhino steadily moves across the open savanna, its massive body casting a long shadow on the golden grass.",
+        "The rhino turns slightly to the left, its horn pointing towards a distant acacia tree, as it continues its slow march.",
+        "With a deliberate pace, the rhino approaches a small watering hole, the ground beneath it slightly vibrating with each step."
+      ]
+    },
+    {
+      "id": "agent_002_2",
+      "image_path": "initial_state/002.png",
+      "prompt_list": [
+        "A solitary rhino walks purposefully through the tall grass, its ears flicking occasionally as birds flutter nearby.",
+        "The rhino pauses to graze, lowering its head to pull at the dry, straw-colored grass with its wide mouth.",
+        "After grazing, the rhino lifts its head and continues on, leaving a subtle path behind it in the grass."
+      ]
+    },
+    {
+      "id": "agent_002_3",
+      "image_path": "initial_state/002.png",
+      "prompt_list": [
+        "A rhino strides confidently through the plains, its thick skin glistening under the sun.",
+        "The rhino veers right, heading towards a cluster of rocks that offer a brief respite from the open landscape.",
+        "Upon reaching the rocks, the rhino circles them, inspecting the area before resuming its journey."
+      ]
+    },
+    {
+      "id": "env_002_4",
+      "image_path": "initial_state/002.png",
+      "prompt_list": [
+        "The vast savanna stretches endlessly, the tall dry grass swaying gently in the warm breeze under a clear blue sky.",
+        "As the afternoon progresses, the grass begins to take on a golden hue, casting intricate patterns of light and shadow.",
+        "By sunset, the sky transforms into a palette of orange and pink, while the grass glows softly in the diminishing light."
+      ]
+    },
+    {
+      "id": "env_002_5",
+      "image_path": "initial_state/002.png",
+      "prompt_list": [
+        "Underneath the expansive sky, the savanna is a sea of golden grass, undulating with the soft gusts of wind.",
+        "Clouds begin to gather on the horizon, subtly shifting the light and casting fleeting shadows over the landscape.",
+        "A gentle rain starts to fall, creating a mosaic of dark spots on the grass, as the clouds drift slowly overhead."
+      ]
+    },
+    {
+      "id": "env_002_6",
+      "image_path": "initial_state/002.png",
+      "prompt_list": [
+        "The open savanna is dotted with dry grass, swaying lightly beneath the expansive, cloudless sky.",
+        "A light breeze picks up, rustling the grass and causing ripples to move across the landscape like waves.",
+        "As the day wears on, the sun's angle shifts, casting long shadows that stretch across the grass in intricate patterns."
+      ]
+    },
+    {
+      "id": "agent_003_1",
+      "image_path": "initial_state/003.png",
+      "prompt_list": [
+        "Two humans walk forward along the wooden path, surrounded by lush greenery and ancient ruins.",
+        "The humans descend a set of stone steps, moving deeper into the overgrown ruins.",
+        "The humans climb over a fallen tree, advancing further into the dense forest."
+      ]
+    },
+    {
+      "id": "agent_003_2",
+      "image_path": "initial_state/003.png",
+      "prompt_list": [
+        "The humans step off the wooden platform, entering a clearing within the ruins.",
+        "The humans turn to the left, navigating through a narrow passage between two crumbling buildings.",
+        "The humans crouch down to pass under a low-hanging branch on their path."
+      ]
+    },
+    {
+      "id": "agent_003_3",
+      "image_path": "initial_state/003.png",
+      "prompt_list": [
+        "The humans move along the edge of the cliff, careful not to lose their footing.",
+        "The humans leap across a small gap in the terrain, landing on another section of the ruins.",
+        "The humans sidestep around a large boulder, continuing their exploration of the area."
+      ]
+    },
+    {
+      "id": "env_003_4",
+      "image_path": "initial_state/003.png",
+      "prompt_list": [
+        "The dense greenery envelops the ancient ruins, with mountains looming in the background.",
+        "Mist begins to settle over the ruins, softening the outlines of the buildings and trees.",
+        "Sunlight filters through the clouds, casting dappled light across the verdant landscape."
+      ]
+    },
+    {
+      "id": "env_003_5",
+      "image_path": "initial_state/003.png",
+      "prompt_list": [
+        "Vines creep further over the weathered stone buildings, merging them with the lush surroundings.",
+        "The ground becomes uneven as roots push through the soil, altering the terrain around the ruins.",
+        "Fog rolls down from the mountains, enveloping the ruins in a gentle, shifting veil."
+      ]
+    },
+    {
+      "id": "env_003_6",
+      "image_path": "initial_state/003.png",
+      "prompt_list": [
+        "The ruins become increasingly covered by the expanding vegetation, blending into the forest.",
+        "Rain begins to fall lightly, creating small rivulets that flow down the ancient stone walls.",
+        "The sky clears, revealing the jagged mountain peaks in sharp contrast to the lush valley below."
+      ]
+    },
+    {
+      "id": "agent_004_1",
+      "image_path": "initial_state/004.png",
+      "prompt_list": [
+        "A satellite glides smoothly over the swirling clouds of a vast planet, its solar panels catching the sunlight as it moves forward through space.",
+        "As the satellite continues its trajectory, it begins to tilt slightly, adjusting its orientation to maintain optimal energy absorption from the sun.",
+        "The satellite now descends gradually, lowering its orbit while maintaining a steady pace above the planet's atmosphere."
+      ]
+    },
+    {
+      "id": "agent_004_2",
+      "image_path": "initial_state/004.png",
+      "prompt_list": [
+        "The satellite orbits gracefully above the planet, its structure casting a long shadow over the cloud formations below.",
+        "In a slow, deliberate maneuver, the satellite rotates to face a new direction, aligning itself with a different trajectory.",
+        "The satellite accelerates slightly, moving to a higher orbital path as it navigates through the low-gravity environment."
+      ]
+    },
+    {
+      "id": "agent_004_3",
+      "image_path": "initial_state/004.png",
+      "prompt_list": [
+        "Hovering above the planet, the satellite maintains a steady course, its panels reflecting the light of a distant sun.",
+        "The satellite shifts its position laterally, gliding over a different section of the planet's atmosphere to capture new data.",
+        "In a precise adjustment, the satellite lowers its altitude slightly, skimming closer to the clouds while maintaining stability."
+      ]
+    },
+    {
+      "id": "env_004_4",
+      "image_path": "initial_state/004.png",
+      "prompt_list": [
+        "The clouds below form a dense, swirling pattern, illuminated by the warm glow of sunlight breaking through the atmosphere.",
+        "Gradually, the clouds begin to disperse, creating gaps that reveal the planet's surface as the sunlight shifts in intensity.",
+        "The cloud formations evolve into elongated streaks, stretched across the horizon, as the sunlight casts long shadows on the surface."
+      ]
+    },
+    {
+      "id": "env_004_5",
+      "image_path": "initial_state/004.png",
+      "prompt_list": [
+        "The planet's atmosphere is adorned with thick clouds, their edges highlighted by the soft sunlight streaming in.",
+        "Over time, the clouds shift and condense, forming towering structures that appear to reach towards the satellite.",
+        "The sunlight changes, casting a golden hue on the clouds, which now appear to stretch and flatten across the horizon."
+      ]
+    },
+    {
+      "id": "env_004_6",
+      "image_path": "initial_state/004.png",
+      "prompt_list": [
+        "Beneath the satellite, the clouds create a vast, textured tapestry, with sunlight painting patterns across them.",
+        "The clouds begin to thin out, their forms becoming more diffuse as the sunlight intensifies, casting sharper contrasts.",
+        "Eventually, the clouds dissipate further, leaving behind wisps that drift across the backdrop of the planet's surface."
+      ]
+    },
+    {
+      "id": "agent_005_1",
+      "image_path": "initial_state/005.png",
+      "prompt_list": [
+        "A masked figure runs briskly along the wooden path, their footsteps echoing against the planks as they navigate the narrow bridge.",
+        "The figure leaps over a fallen log blocking the path, landing smoothly on the other side, and continues their swift movement forward.",
+        "They veer sharply to the right, disappearing into the dense foliage lining the path, their silhouette momentarily visible through the leaves."
+      ]
+    },
+    {
+      "id": "agent_005_2",
+      "image_path": "initial_state/005.png",
+      "prompt_list": [
+        "Two masked individuals sprint side by side down the wooden walkway, their coordinated steps creating a rhythmic pattern.",
+        "One of the individuals suddenly accelerates, taking the lead as they head toward the end of the path.",
+        "The pair then splits directions, with one darting left into the forest, while the other continues straight ahead."
+      ]
+    },
+    {
+      "id": "agent_005_3",
+      "image_path": "initial_state/005.png",
+      "prompt_list": [
+        "A duo of masked figures dash along the bridge, their eyes scanning the surroundings for any obstacles.",
+        "They expertly dodge a large barrel in their path, each moving to a different side to avoid collision.",
+        "As they reach the end of the bridge, they both jump down to the lower path, maintaining their rapid pace."
+      ]
+    },
+    {
+      "id": "env_005_4",
+      "image_path": "initial_state/005.png",
+      "prompt_list": [
+        "The wooden path stretches across a narrow bridge, the planks weathered and sunlit, casting long shadows beneath.",
+        "As the sun shifts, the shadows on the bridge elongate, creating a stark contrast with the bright surface of the planks.",
+        "Leaves begin to fall from the trees above, scattering across the path and adding a layer of color to the aged wood."
+      ]
+    },
+    {
+      "id": "env_005_5",
+      "image_path": "initial_state/005.png",
+      "prompt_list": [
+        "Tall trees line the path, their dense foliage providing intermittent shade along the bridge.",
+        "A gentle breeze stirs the leaves, revealing glimpses of sunlight that dance across the path.",
+        "The foliage thickens as the path progresses, with logs occasionally appearing, partially obscured by the undergrowth."
+      ]
+    },
+    {
+      "id": "env_005_6",
+      "image_path": "initial_state/005.png",
+      "prompt_list": [
+        "In the background, quaint buildings with steep roofs stand amidst the forest, their shadows extending across the ground.",
+        "The sunlight shifts, causing the shadows of the buildings to gradually creep closer to the path.",
+        "As the day progresses, the shadows merge, creating a patchwork pattern on the wooden planks of the bridge."
+      ]
+    },
+    {
+      "id": "agent_006_1",
+      "image_path": "initial_state/006.png",
+      "prompt_list": [
+        "A rugged human stands near a burning car, its flames reaching high into the air, casting flickering shadows on the ground.",
+        "The human turns away from the blazing car, walking steadily across the barren landscape, leaving the fiery wreckage behind.",
+        "Continuing forward, the human navigates around scattered debris, stepping carefully over uneven terrain as they approach the distant horizon."
+      ]
+    },
+    {
+      "id": "agent_006_2",
+      "image_path": "initial_state/006.png",
+      "prompt_list": [
+        "A human stands beside a flaming car, the heat distorting the air around them as they glance towards the horizon.",
+        "The human strides confidently away from the fire, their silhouette stark against the bright sky, moving towards a distant shipwreck.",
+        "Reaching the shipwreck, the human climbs over rusted metal, exploring the decaying structure with cautious steps."
+      ]
+    },
+    {
+      "id": "agent_006_3",
+      "image_path": "initial_state/006.png",
+      "prompt_list": [
+        "A solitary human stands near the burning car, watching the flames consume the vehicle's remains.",
+        "The human begins to walk, leaving the blaze behind, their boots crunching on the gravelly ground as they head towards a distant rise.",
+        "Ascending the rise, the human pauses to survey the desolate landscape, the wind tugging at their clothing."
+      ]
+    },
+    {
+      "id": "env_006_4",
+      "image_path": "initial_state/006.png",
+      "prompt_list": [
+        "The burning car sits amidst the barren terrain, its flames casting flickering shadows on the dusty ground.",
+        "The flames begin to dwindle, leaving charred remains and smoke swirling up into the sky, creating a haze over the area.",
+        "The smoke slowly dissipates, revealing the scorched earth beneath, darkened and ashen from the intense heat."
+      ]
+    },
+    {
+      "id": "env_006_5",
+      "image_path": "initial_state/006.png",
+      "prompt_list": [
+        "A car is engulfed in flames, its orange glow illuminating the surrounding ground and casting long shadows.",
+        "As the fire consumes the car, the surrounding air shimmers with heat, and the shadows dance wildly across the rocky terrain.",
+        "Once the flames have subsided, the area is left with a layer of soot and charred debris, blending with the natural landscape."
+      ]
+    },
+    {
+      "id": "env_006_6",
+      "image_path": "initial_state/006.png",
+      "prompt_list": [
+        "The scorched car burns brightly, its flames sending shadows rippling across the barren ground.",
+        "Gradually, the fire diminishes, leaving behind a smoldering wreck and a thick plume of smoke rising into the sky.",
+        "The smoke disperses, leaving the once fiery site desolate, with only the charred skeleton of the car remaining amidst the dust."
+      ]
+    },
+    {
+      "id": "agent_007_1",
+      "image_path": "initial_state/007.png",
+      "prompt_list": [
+        "A person walks steadily across the sandy terrain, approaching the rustic metal shack.",
+        "The person turns left, moving around the side of the shack, their steps leaving prints in the sand.",
+        "They continue forward, climbing over a small dune, advancing towards a distant rocky outcrop."
+      ]
+    },
+    {
+      "id": "agent_007_2",
+      "image_path": "initial_state/007.png",
+      "prompt_list": [
+        "A person strides confidently toward the weathered building on the sandy landscape.",
+        "They pause momentarily at the entrance, then push the door open and step inside.",
+        "Emerging from the shack, the person descends the steps, heading towards the open desert."
+      ]
+    },
+    {
+      "id": "agent_007_3",
+      "image_path": "initial_state/007.png",
+      "prompt_list": [
+        "A person advances across the sunlit sand, drawing nearer to the battered structure.",
+        "Reaching the shack, they circle around it, scanning the surroundings.",
+        "The person then moves away from the structure, walking along the edge of a rocky cliff."
+      ]
+    },
+    {
+      "id": "env_007_4",
+      "image_path": "initial_state/007.png",
+      "prompt_list": [
+        "The rusty metal shack stands against the rocky backdrop, surrounded by a stretch of golden sand.",
+        "As the sun moves across the sky, the light casts long shadows from the shack onto the sand",
+        "The wind picks up, shifting the sand around the base of the shack, altering its shape subtly."
+      ]
+    },
+    {
+      "id": "env_007_5",
+      "image_path": "initial_state/007.png",
+      "prompt_list": [
+        "Rocks and sand surround the old metal shack, forming a rugged landscape.",
+        "Over time, the rocks begin to show signs of erosion, their surfaces becoming smoother.",
+        "Eventually, small plants begin to sprout between the rocks, adding patches of green to the scene."
+      ]
+    },
+    {
+      "id": "env_007_6",
+      "image_path": "initial_state/007.png",
+      "prompt_list": [
+        "The landscape features a dilapidated shack amidst the expanse of sand and rock.",
+        "Clouds slowly accumulate in the sky, casting a muted light over the sandy terrain.",
+        "Raindrops begin to fall, darkening the sand around the shack, creating small puddles."
+      ]
+    },
+    {
+      "id": "agent_008_1",
+      "image_path": "initial_state/008.png",
+      "prompt_list": [
+        "A man in a cowboy outfit strides confidently through the dusty street of a small town, kicking up small clouds of dirt with each step.",
+        "He turns left and walks towards the wooden saloon, pushing open the swinging doors with a firm hand.",
+        "Inside, he navigates through the crowded tables, weaving between patrons as he heads towards the bar."
+      ]
+    },
+    {
+      "id": "agent_008_2",
+      "image_path": "initial_state/008.png",
+      "prompt_list": [
+        "A man stands in the middle of the town square, scanning his surroundings with a keen eye.",
+        "He begins to walk forward, crossing the open space as he approaches a horse tied to a post.",
+        "Reaching the horse, he unties it and leads it away, the two moving in sync as they exit the scene."
+      ]
+    },
+    {
+      "id": "agent_008_3",
+      "image_path": "initial_state/008.png",
+      "prompt_list": [
+        "A solitary man stands with a hand resting on his hip, surveying the town's buildings.",
+        "He starts to move across the street, his boots making quiet thuds on the wooden planks of the sidewalk.",
+        "Reaching the end of the street, he pauses to look back at the town before continuing his journey into the open plains."
+      ]
+    },
+    {
+      "id": "env_008_4",
+      "image_path": "initial_state/008.png",
+      "prompt_list": [
+        "The dusty street of the town stretches out, flanked by weathered wooden buildings under a clear blue sky.",
+        "A gentle wind stirs, causing the dry dirt to swirl in small eddies across the street.",
+        "As the sun begins to set, the shadows of the buildings lengthen, casting cool patterns on the ground."
+      ]
+    },
+    {
+      "id": "env_008_5",
+      "image_path": "initial_state/008.png",
+      "prompt_list": [
+        "The street is lined with rustic wooden buildings, each bearing signs of age and exposure to the elements.",
+        "In the afternoon light, the buildings' facades take on a warm glow, highlighting the grain of the wood.",
+        "As evening approaches, the sky shifts to hues of orange and pink, reflecting off the glass windows of the structures."
+      ]
+    },
+    {
+      "id": "env_008_6",
+      "image_path": "initial_state/008.png",
+      "prompt_list": [
+        "The town's street is a corridor of rustic charm, with dirt pathways leading to various wooden structures.",
+        "A solitary tree stands at the end of the street, its leaves rustling gently in a soft breeze.",
+        "Clouds begin to gather, casting a muted shadow over the town as they drift lazily across the sky."
+      ]
+    },
+    {
+      "id": "agent_009_1",
+      "image_path": "initial_state/009.png",
+      "prompt_list": [
+        "A dog leaps gracefully through the air in a lush green field, its paws barely touching the ground as it moves forward.",
+        "The dog lands softly and continues to sprint across the open grass, weaving between the trees with swift agility.",
+        "Reaching the edge of the field, the dog turns sharply to the right, galloping back towards its starting point with renewed energy."
+      ]
+    },
+    {
+      "id": "agent_009_2",
+      "image_path": "initial_state/009.png",
+      "prompt_list": [
+        "A dog bounds energetically across a verdant meadow, its body stretched in motion as it advances.",
+        "The dog pauses momentarily, then pivots and dashes towards a distant cluster of bushes, its tail wagging.",
+        "Having explored the bushes, the dog reverses course, sprinting back towards the open expanse of the field."
+      ]
+    },
+    {
+      "id": "agent_009_3",
+      "image_path": "initial_state/009.png",
+      "prompt_list": [
+        "A dog is mid-leap over a patch of tall grass, its ears flapping with the motion as it clears the obstacle.",
+        "Landing smoothly, the dog trots forward, heading towards a small hill that rises gently in the distance.",
+        "Upon reaching the hill, the dog scales it with ease, standing atop it to survey the surrounding area."
+      ]
+    },
+    {
+      "id": "env_009_4",
+      "image_path": "initial_state/009.png",
+      "prompt_list": [
+        "A wide field of vibrant green grass stretches out, bordered by tall trees that sway gently in the breeze.",
+        "The grass grows denser and taller as it extends towards the horizon, creating a thick carpet of greenery.",
+        "As the sun shifts, dappled light filters through the trees, casting moving patterns on the grass below."
+      ]
+    },
+    {
+      "id": "env_009_5",
+      "image_path": "initial_state/009.png",
+      "prompt_list": [
+        "A serene field is covered with lush grass, with trees lining the edges creating a natural barrier.",
+        "As time progresses, the shadows of the trees lengthen, stretching across the field as the sun descends.",
+        "The sky darkens, and the field is gradually enveloped in a soft twilight, with the trees becoming silhouettes."
+      ]
+    },
+    {
+      "id": "env_009_6",
+      "image_path": "initial_state/009.png",
+      "prompt_list": [
+        "A verdant field of grass is bordered by dense trees, their leaves rustling softly in the gentle wind.",
+        "Clouds begin to gather above, casting a shifting pattern of light and shadow over the field and trees.",
+        "A light rain begins to fall, creating a fresh scent and causing ripples on small puddles forming in the grass."
+      ]
+    }
+]

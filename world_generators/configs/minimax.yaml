@@ -1,0 +1,14 @@
+_target_: world_generators.minimax.Minimax
+generation_type: i2v
+model_name: minimax
+
+api_url: "https://api.minimax.io/v1/video_generation"
+model_id: "I2V-01-Director"
+
+inference:
+  resolution: [1072, 720]
+  frame_num: 141
+
+helper_config:
+  output_root: outputs/action_simulation_fidelity/minimax
+  fps: 25

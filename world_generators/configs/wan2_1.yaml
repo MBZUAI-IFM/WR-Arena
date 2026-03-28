@@ -1,0 +1,43 @@
+_target_: world_generators.wan2_1.WAN
+generation_type: i2v
+model_name: wan2_1
+
+# ─────────────────────────── model section ──────────────────────────
+model_params:
+  checkpoint_dir: thirdparty/wan2_1/checkpoints/Wan2.1-I2V-14B-480P
+  
+  # Parallelism knobs 
+  ulysses_size: 8        # sequence-parallel degree
+  ring_size: 1          # ring-attention degree
+  
+  # FSDP / CPU off-loading toggles
+  t5_fsdp: true         # wrap T5 with Fully-Sharded Data-Parallel
+  dit_fsdp: true        # wrap DiT with FSDP
+  t5_cpu: false         # place T5 on CPU instead of GPU
+
+# ───────────────────────── inference section ────────────────────────
+inference:
+  size: "832*480"
+  frame_num: 81
+  
+  # Diffusion / flow-matching sampler controls
+  sample_steps: 40          # # of solver steps
+  sample_shift: 3.0         # shift value for FM schedulers
+  sample_solver: "unipc"    # "unipc" | "dpm++"
+  sample_guide_scale: 5.0   # classifier-free guidance scale
+  
+  base_seed: 114514         # -1 → random every run
+  
+  # Memory trade-off: move model back to CPU between steps
+  offload_model: false
+  
+  # Prompt upsampling 
+  use_prompt_extend: true
+  prompt_extend_method: "local_qwen"       # "dashscope" | "local_qwen"
+  prompt_extend_model: null                # use YAML null for python "None"
+  prompt_extend_target_lang: "en"
+  prompt_extend_retries: 3
+
+helper_config:
+  output_root: outputs/action_simulation_fidelity/wan2_1
+  fps: 16  # Used for video creation

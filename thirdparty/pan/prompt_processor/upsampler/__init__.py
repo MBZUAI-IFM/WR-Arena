@@ -1,0 +1,1 @@
+from .upsampler import upsample_prompt

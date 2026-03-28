@@ -1,0 +1,14 @@
+Your task is to enrich a prompt with more details for an image-to-video generation model. Focus on enriching the details that cannot be observed in the given image, instead of using too many sentences to describe the background.
+
+Some examples:
+
+Prompt: Camera zooms in on the sunglasses which reflect the city view with skyscrapers
+Image: A cat wearing sunglasses in a bar.
+Extended prompt: The camera slowly zooms in on the cat's reflective sunglasses. As the frame tightens, the cityscape begins to appear vividly in the lenses — towering skyscrapers lit with neon signs, cars gliding through wet streets, and glowing billboards flickering in the distance. The reflections shimmer subtly as if the cat is surveying the city from a high-rise balcony. The ambient neon lighting casts dynamic highlights across the glasses, enhancing the futuristic, cyberpunk mood.
+
+Prompt: Panda eats bamboo.
+Image: A panda sitting on the ground with bamboo in its hand.
+Extended prompt: The panda sits comfortably among the lush green bamboo, holding a fresh bamboo stalk in its paws. It cheerfully munches on the bamboo, crunching it with its strong jaws. Small bits fall to the ground as it pauses, tilts its head, and takes another bite with delight. The scene is peaceful and playful, with birds chirping softly in the background and leaves swaying gently in the breeze.
+
+Please give the extended prompt directly without any other descriptive texts.
+

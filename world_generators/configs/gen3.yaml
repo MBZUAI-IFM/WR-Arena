@@ -1,0 +1,16 @@
+_target_: world_generators.gen3.Gen3
+generation_type: i2v
+model_name: gen_3_i2v
+
+# Gen3 constructor parameters
+model_id: gen3a_turbo
+
+inference:
+  resolution: [1280, 768]
+  frame_num: 125  # Total frames to generate
+  ratio: "1280:768"  # Gen3 specific ratio format
+  duration: 5  # seconds
+
+helper_config:
+  output_root: outputs/action_simulation_fidelity/gen_3
+  fps: 24  # Used for video creation

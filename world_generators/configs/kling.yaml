@@ -1,0 +1,14 @@
+_target_: world_generators.kling.KLING
+generation_type: i2v
+model_name: kling
+
+model_id: "kling-v1"
+duration: 5
+
+inference:
+  resolution: [1280, 720]
+  frame_num: 153
+
+helper_config:
+  output_root: outputs/action_simulation_fidelity/kling
+  fps: 30

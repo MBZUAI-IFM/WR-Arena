@@ -1,0 +1,32 @@
+_target_: world_generators.cosmos1.Cosmos1
+generation_type: i2v
+model_name: cosmos-predict1
+
+# ─────────────────────────── model section ──────────────────────────
+model_params:
+  checkpoint_dir: thirdparty/cosmos-predict1/checkpoints
+  diffusion_transformer_dir: Cosmos-Predict1-14B-Video2World
+  prompt_upsampler_dir: Pixtral-12B
+  disable_prompt_upsampler: False
+  offload_diffusion_transformer: False
+  offload_tokenizer: False
+  offload_text_encoder_model: False
+  offload_prompt_upsampler: True
+  offload_guardrail_models: True
+  disable_guardrail: True
+
+# ───────────────────────── inference section ────────────────────────
+inference:
+  num_gpus: 8                    # Number of GPUs
+  guidance: 7                    # Guidance scale
+  num_steps: 35                  # Number of steps
+  height: 704                    # Video height
+  width: 1280                    # Video width
+  frame_num: 121                 # Number of video frames
+  
+# ─────────────────────────── helper config ───────────────────────────
+helper_config:
+  output_root: outputs/action_simulation_fidelity/cosmos1
+  fps: 24                        # Used for video creation
+
+

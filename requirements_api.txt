@@ -1,0 +1,17 @@
+torch==2.6.0
+torchvision==0.21.0
+
+requests
+PyJWT
+opencv-python
+Pillow
+tqdm
+hydra-core
+omegaconf
+structlog
+numpy
+runwayml
+mediapy
+openai
+google-genai
+mmengine

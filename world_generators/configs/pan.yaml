@@ -1,0 +1,22 @@
+_target_: world_generators.pan.PAN
+generation_type: i2v
+model_name: pan
+
+# ─────────────────────────── model section ──────────────────────────
+model_params:
+  endpoint: END_POINT
+
+# ───────────────────────── inference section ────────────────────────
+inference:
+  seed: 42
+  num_gpus: 1
+  guidance: 4.0
+  num_steps: 50
+  height: 480
+  width: 832
+  fps: 20
+  frame_num: 41  # Total number of frames per generation
+  num_input_frames: 1
+
+helper_config:
+  output_root: outputs/action_simulation_fidelity/pan

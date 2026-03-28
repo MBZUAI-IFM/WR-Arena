@@ -1,0 +1,30 @@
+_target_: world_generators.cosmos2.Cosmos2
+generation_type: i2v
+model_name: cosmos-predict2
+
+# ─────────────────────────── model section ──────────────────────────
+model_params:
+
+  dit_path: thirdparty/cosmos-predict2/checkpoints/nvidia/Cosmos-Predict2-14B-Video2World/model-720p-16fps.pt
+  text_encoder_path: thirdparty/cosmos-predict2/checkpoints/google-t5/t5-11b
+  tokenizer_vae_pth: thirdparty/cosmos-predict2/checkpoints/nvidia/Cosmos-Predict2-14B-Video2World/tokenizer/tokenizer.pth
+  prompt_refiner_config_checkpoint_dir: thirdparty/cosmos-predict2/checkpoints/nvidia/Cosmos-Reason1-7B
+# ───────────────────────── inference section ────────────────────────
+inference:
+
+  target_size: [1280, 704]        # [width, height] for input image processing
+  frame_num: 93
+  guidance: 7.0                  # Guidance scale for CFG
+  num_conditional_frames: 1      # 1 for single frame, 5 for multi-frame conditioning
+  num_sampling_steps: 35         # Number of denoising steps
+  negative_prompt: "The video captures a series of frames showing ugly scenes, static with no motion, motion blur, over-saturation, shaky footage, low resolution, grainy texture, pixelated images, poorly lit areas, underexposed and overexposed scenes, poor color balance, washed out colors, choppy sequences, jerky movements, low frame rate, artifacting, color banding, unnatural transitions, outdated special effects, fake elements, unconvincing visuals, poorly edited content, jump cuts, visual noise, and flickering. Overall, the video is of poor quality."
+  
+  enable_guardrail: false         # Enable safety guardrails
+  offload_guardrail: false       # Offload guardrail to CPU to save GPU memory
+  enable_prompt_refiner: true    # Enable prompt enhancement
+  offload_prompt_refiner: false  # Offload prompt refiner to CPU to save GPU memory
+  
+# ─────────────────────────── helper config ───────────────────────────
+helper_config:
+  output_root: outputs/action_simulation_fidelity/cosmos2
+  fps: 16  # Used for video creation 
