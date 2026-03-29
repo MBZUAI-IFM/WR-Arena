@@ -1,0 +1,4 @@
+model: sora2
+generate_type: i2v
+frames: 120
+fps: 30

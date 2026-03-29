@@ -1,0 +1,4 @@
+model: cosmos1
+generate_type: i2v
+frames: 121
+fps: 24

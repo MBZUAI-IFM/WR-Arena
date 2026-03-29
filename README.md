@@ -5,6 +5,7 @@ A diagnostic tool and a guideline for advancing next-generation world models cap
 - [Action Simulation Fidelity](#action-simulation-fidelity)
 - [Simulative Reasoning & Planning](#simulative-reasoning--planning)
 - [Smoothness Evaluation](#smoothness-evaluation)
+- [Generation Consistency Evaluation](#generation-consistency-evaluation)
 
 
 ## Action Simulation Fidelity
@@ -235,3 +236,72 @@ python smoothness_eval_scripts/compute_smoothness_scores.py \
 ```
 
 Per-instance results are written to `outputs/smoothness_eval/pan_scores/{instance_id}/smoothness.json`. An aggregate `summary.json` is written once all instances are scored. For multi-node SLURM evaluation, set `MODEL_NAME` in `smoothness_eval_scripts/eval.sh` and run `sbatch smoothness_eval_scripts/eval.sh`.
+
+## Generation Consistency Evaluation
+
+This section evaluates video generation models on 7 aspects of multi-round generation consistency using the [WorldScore](https://github.com/haoyi-duan/WorldScore) benchmark framework (MIT License).
+
+| Aspect | Metric | Key dependency |
+|---|---|---|
+| `camera_control` | camera reprojection error | **DROID-SLAM** |
+| `object_control` | object detection score | **GroundingDINO + SAM2** |
+| `content_alignment` | CLIP score | CLIP |
+| `3d_consistency` | reprojection error | **DROID-SLAM** |
+| `photometric_consistency` | optical flow AEPE | SEA-RAFT |
+| `style_consistency` | Gram matrix distance | VGG |
+| `subjective_quality` | CLIP-IQA+, MUSIQ | QAlign, MUSIQ |
+
+Each score is a **list** of per-round values rather than a single scalar. The bold aspects require heavy thirdparty dependencies (see WorldScore's own setup guide). The remaining four aspects (`content_alignment`, `photometric_consistency`, `style_consistency`, `subjective_quality`) can be run on any GPU without those dependencies.
+
+### Setup
+
+#### 1. Add WorldScore as a submodule and install it
+
+```bash
+git submodule update --init thirdparty/WorldScore
+pip install -e thirdparty/WorldScore
+```
+
+Follow [WorldScore's setup instructions](https://github.com/haoyi-duan/WorldScore) for the thirdparty dependencies (DROID-SLAM, GroundingDINO, SAM2) if you need all 7 aspects.
+
+#### 2. Install WR-Arena patches
+
+```bash
+bash generation_consistency_eval_scripts/install_patches.sh
+```
+
+This copies the modified evaluator into the WorldScore submodule.
+
+### Step 1: Generate Videos
+
+Edit `IMAGE_ROOT` in the script to point to your local WorldScore-Dataset, then run:
+
+```bash
+bash generation_consistency_eval_scripts/pan.sh
+```
+
+Generated videos are saved under `outputs/generation_consistency_eval/pan/`.
+
+### Step 2: Prepare WorldScore Directory Structure
+
+```bash
+python generation_consistency_eval_scripts/prepare_worldscore_dirs.py \
+    --videos_root  outputs/generation_consistency_eval/pan \
+    --dataset_json datasets/generation_consistency_eval/samples.json \
+    --output_root  outputs/generation_consistency_eval/pan_eval
+```
+
+### Step 3: Evaluate
+
+```bash
+python generation_consistency_eval_scripts/run_evaluate_multiround.py \
+    --model_name      pan \
+    --visual_movement static \
+    --runs_root       outputs/generation_consistency_eval/pan_eval \
+    --num_jobs        24 \
+    --use_slurm       True \
+    --slurm_partition main \
+    --slurm_qos       wm
+```
+
+Results are written to `outputs/generation_consistency_eval/pan_eval/worldscore_output/worldscore_multiround.json`. For SLURM-based end-to-end runs, set `MODEL_NAME` in `generation_consistency_eval_scripts/eval.sh` and run `sbatch generation_consistency_eval_scripts/eval.sh`.

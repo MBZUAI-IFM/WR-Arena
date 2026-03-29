@@ -1,0 +1,4 @@
+model: veo3
+generate_type: i2v
+frames: 96
+fps: 24

@@ -1,0 +1,3 @@
+[submodule "thirdparty/WorldScore"]
+	path = thirdparty/WorldScore
+	url = https://github.com/haoyi-duan/WorldScore.git

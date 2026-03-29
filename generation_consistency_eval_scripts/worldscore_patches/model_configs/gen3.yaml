@@ -1,0 +1,4 @@
+model: gen3
+generate_type: i2v
+frames: 125
+fps: 24

@@ -1,0 +1,4 @@
+model: minimax
+generate_type: i2v
+frames: 141
+fps: 25

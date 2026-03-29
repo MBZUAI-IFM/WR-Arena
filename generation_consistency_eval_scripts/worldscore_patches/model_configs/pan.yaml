@@ -1,0 +1,4 @@
+model: pan
+generate_type: i2v
+frames: 41
+fps: 20

@@ -1,0 +1,4 @@
+model: kling
+generate_type: i2v
+frames: 153
+fps: 30
