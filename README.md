@@ -4,6 +4,8 @@ A diagnostic tool and a guideline for advancing next-generation world models cap
 ## Table of Contents
 - [Action Simulation Fidelity](#action-simulation-fidelity)
 - [Simulative Reasoning & Planning](#simulative-reasoning--planning)
+- [Smoothness Evaluation](#smoothness-evaluation)
+
 
 ## Action Simulation Fidelity
 
@@ -195,3 +197,41 @@ sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-
 ```
 
 **Evaluation**: Similar to open-ended simulation planning, check the generated results in `outputs/simulative_reasoning_planning/structured_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`. Analyze the action sequence to determine whether the model successfully completed the structured task within the specified action limits.
+
+## Smoothness Evaluation
+
+This section evaluates the temporal smoothness of multi-round generated videos using optical flow. Consecutive frame pairs are processed with SEA-RAFT to compute velocity and acceleration magnitudes, which are combined into a smoothness score (`vmag × exp(−λ × amag)`).
+
+### Dataset
+
+`datasets/smoothness_eval/samples.json` contains 100 photorealistic outdoor scenes, each with a 10-round sequential prompt list. Reference images are not bundled — set `IMAGE_ROOT` in the generation scripts to point to your local copy of the WorldScore-Dataset.
+
+### Setup: Download SEA-RAFT Checkpoint
+
+```bash
+wget https://huggingface.co/datasets/memcpy/SEA-RAFT/resolve/main/Tartan-C-T-TSKH-spring540x960-M.pth \
+    -O thirdparty/SEA-RAFT/checkpoints/Tartan-C-T-TSKH-spring540x960-M.pth
+```
+
+### Step 1: Generate Videos
+
+Scripts for all supported models are in `smoothness_eval_scripts/`. Example using PAN:
+
+```bash
+# Edit IMAGE_ROOT inside the script first, then:
+bash smoothness_eval_scripts/pan.sh
+```
+
+Generated videos are saved under `outputs/smoothness_eval/pan/{instance_id}/rounds/`.
+
+### Step 2: Compute Smoothness Scores
+
+```bash
+python smoothness_eval_scripts/compute_smoothness_scores.py \
+    --videos_dir outputs/smoothness_eval/pan \
+    --output_dir outputs/smoothness_eval/pan_scores \
+    --raft_ckpt thirdparty/SEA-RAFT/checkpoints/Tartan-C-T-TSKH-spring540x960-M.pth \
+    --num_workers 4
+```
+
+Per-instance results are written to `outputs/smoothness_eval/pan_scores/{instance_id}/smoothness.json`. An aggregate `summary.json` is written once all instances are scored. For multi-node SLURM evaluation, set `MODEL_NAME` in `smoothness_eval_scripts/eval.sh` and run `sbatch smoothness_eval_scripts/eval.sh`.
