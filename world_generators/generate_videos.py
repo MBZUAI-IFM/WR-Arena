@@ -103,9 +103,13 @@ def create_round_videos(frames: List[Image.Image], output_dir: Path, frames_per_
     
     return created_videos
 
-def process_instance(generator, instance, output_root, rank, config, gen_rank=None):
+def process_instance(generator, instance, output_root, rank, config, gen_rank=None, image_root=None):
     """Process single instance"""
-    image_path = Path(os.getenv("DATA_PATH")) / instance["image_path"]
+    raw_image_path = instance["image_path"]
+    if image_root:
+        image_path = Path(image_root) / raw_image_path
+    else:
+        image_path = Path(os.getenv("DATA_PATH", ".")) / raw_image_path
     instance_id = instance["id"].split("_", 1)[-1]
     output_dir = Path(output_root) / instance_id
     complete_video_path = output_dir / "video" / "complete_video.mp4"
@@ -222,7 +226,12 @@ def main():
     slurm_group.add_argument("--no-slurm", action="store_true", help="Use API-only processing, no distributed")
     parser.add_argument("--num-jobs", type=int, default=1, help="Number of parallel jobs for batch processing")
     parser.add_argument("--batch-index", type=int, default=0, help="Current batch index (0-based)")
-    
+    parser.add_argument("--output_root", default=None,
+                        help="Override the output root directory from the model config.")
+    parser.add_argument("--image_root", default=None,
+                        help="Root directory prepended to relative image_path values in the dataset. "
+                             "Falls back to the DATA_PATH environment variable if not set.")
+
     args = parser.parse_args()
     config = load_config(args.model_name)
     use_slurm = not args.no_slurm
@@ -245,7 +254,8 @@ def main():
     incomplete_instances = []
     completed_count = 0
     if rank == 0 or not use_slurm:
-        output_root = project_root / config.get('helper_config', {}).get('output_root', 'outputs')
+        output_root = Path(args.output_root) if args.output_root else \
+            project_root / config.get('helper_config', {}).get('output_root', 'outputs')
         for instance in all_instances:
             instance_id = instance["id"].split("_", 1)[-1]  # Must match process_instance parsing
             complete_video_path = Path(output_root) / instance_id / "video" / "complete_video.mp4"
@@ -313,8 +323,8 @@ def main():
     
     if should_print_loading:
         print("Model loaded")
-    output_root = config.get('helper_config', {}).get('output_root', 'outputs')
-    
+    output_root = args.output_root or config.get('helper_config', {}).get('output_root', 'outputs')
+
     total_frames = 0
     processed_count = 0
     skipped_count = 0
@@ -324,7 +334,7 @@ def main():
     
     for instance in tqdm(instances, desc="🎬 Processing", unit="video", disable=not show_progress):
         try:
-            frames = process_instance(generator, instance, output_root, rank, config, args.gen_rank)
+            frames = process_instance(generator, instance, output_root, rank, config, args.gen_rank, args.image_root)
             if count_results:
                 total_frames += frames
                 if frames > 0:
