@@ -125,11 +125,7 @@ Results will be saved in `outputs/action_simulation_fidelity/MODEL_NAME/MODEL_NA
 
 ## Simulative Reasoning & Planning
 
-This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks.
-
-### Fine-tuning Setup
-
-Before evaluation, models need to be fine-tuned on specific datasets:
+This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks. Part of the code has been uploaded; the rest is currently being prepared.
 
 ### Fine-tuning Setup
 
