@@ -125,8 +125,7 @@ Results will be saved in `outputs/action_simulation_fidelity/MODEL_NAME/MODEL_NA
 
 ## Simulative Reasoning & Planning
 
-This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks.  
-> ⚠️ Part of the code has been uploaded; the rest is currently being prepared.
+This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks. Part of the code has been uploaded and the rest is currently being prepared.
 
 ### Fine-tuning Setup
 
@@ -184,7 +183,7 @@ After execution, check the results in:
 - **Structured Simulation Planning**:  
   `outputs/simulative_reasoning_planning/structured_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
 
-Analyze the action sequences to determine whether the models successfully completed the tasks. For structured planning, ensure tasks are completed within the specified action limits.
+Analyze the action sequences to determine whether the models successfully completed the tasks.
 
 ## Smoothness Evaluation
 
