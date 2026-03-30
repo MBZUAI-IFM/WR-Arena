@@ -106,13 +106,6 @@ python action_simulation_fidelity_scripts/action_simulation_fidelity_eval.py \
 **Examples:**
 
 ```bash
-# Evaluate Cosmos-Predict1
-python action_simulation_fidelity_scripts/action_simulation_fidelity_eval.py \
-    --openai_api_key YOUR_KEY \
-    --base_path outputs/action_simulation_fidelity/cosmos1 \
-    --dataset_json datasets/action_simulation_fidelity_subset/samples_subset.json \
-    --save_name cosmos1
-
 # Evaluate PAN
 python action_simulation_fidelity_scripts/action_simulation_fidelity_eval.py \
     --openai_api_key YOUR_KEY \
