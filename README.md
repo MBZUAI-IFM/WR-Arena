@@ -150,40 +150,40 @@ Both **Cosmos-Predict1** and **Cosmos-Predict2** models need to be fine-tuned on
 
 ---
 
-### Evaluation
+### Evaluation & Results
+
+Run the evaluation scripts and check the generated results for both open-ended and structured simulation planning.
 
 **Open-ended Simulation Planning**:
 
-- Cosmos-Predict1:  
+- **Cosmos-Predict1**:  
   `sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh`  
-- Cosmos-Predict2:  
+- **Cosmos-Predict2**:  
   `sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos2.sh`
 
 **Structured Simulation Planning**:
 
 Tasks may have a maximum of 5 or 10 actions:  
 
-- Maximum 5 actions:  
+- **Maximum 5 actions**:  
   - Cosmos-Predict1: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_5.sh`  
   - Cosmos-Predict2: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_5.sh`  
 
-- Maximum 10 actions:  
+- **Maximum 10 actions**:  
   - Cosmos-Predict1: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_10.sh`  
   - Cosmos-Predict2: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_10.sh`  
 
----
+**Result Checking**:
 
-### Result Evaluation
+After execution, check the results in the following paths:
 
-After execution, check the results in:
-
-- **Open-ended Simulation Planning**:  
+- **Open-ended**:  
   `outputs/simulative_reasoning_planning/open_ended_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
 
-- **Structured Simulation Planning**:  
+- **Structured**:  
   `outputs/simulative_reasoning_planning/structured_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
 
-Analyze the action sequences to determine whether the models successfully completed the tasks.
+Analyze the action sequences to determine whether the models successfully completed the tasks. For structured planning, ensure tasks are completed within the specified action limits.
 
 ## Smoothness Evaluation
 
