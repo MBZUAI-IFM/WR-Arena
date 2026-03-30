@@ -149,22 +149,27 @@ Run the evaluation scripts and check the generated results for both open-ended a
 
 **Open-ended Simulation Planning**:
 
-- **Cosmos-Predict1**:  
-  `sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh`  
-- **Cosmos-Predict2**:  
-  `sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos2.sh`
+```bash
+# Cosmos-Predict1
+sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh
+
+# Cosmos-Predict2
+sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos2.sh
+```
 
 **Structured Simulation Planning**:
 
-Tasks may have a maximum of 5 or 10 actions:  
+Tasks may have a maximum of 5 or 10 actions:
 
-- **Maximum 5 actions**:  
-  - Cosmos-Predict1: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_5.sh`  
-  - Cosmos-Predict2: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_5.sh`  
+```bash
+# Maximum 5 actions
+sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_5.sh
+sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_5.sh
 
-- **Maximum 10 actions**:  
-  - Cosmos-Predict1: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_10.sh`  
-  - Cosmos-Predict2: `sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_10.sh`  
+# Maximum 10 actions
+sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_10.sh
+sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_10.sh
+```
 
 **Result Checking**:
 
