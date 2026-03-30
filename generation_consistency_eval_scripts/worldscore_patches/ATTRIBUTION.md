@@ -30,7 +30,7 @@ SOFTWARE.
 
 ## What we changed
 
-`evaluator_per_round_arif.py` is derived from WorldScore's evaluator class.
+`evaluator_per_round.py` is derived from WorldScore's evaluator class.
 Changes relative to the original:
 - Removed `MultiRoundSmoothness_v1Metric` (VFIMamba-based temporal smoothness)
   and all associated code paths so the evaluator depends only on standard

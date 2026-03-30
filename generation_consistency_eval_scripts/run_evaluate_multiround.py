@@ -215,7 +215,7 @@ def calculate_worldscore(config: dict, visual_movement_list: list,
 def run_evaluation(args: Namespace, config: dict, num_jobs: int, use_slurm: bool,
                    only_calculate_mean: bool, delete_calculated_results: bool,
                    **slurm_parameters) -> None:
-    from worldscore.benchmark.helpers.evaluator_per_round_arif import MultiRoundEvaluator as Evaluator
+    from worldscore.benchmark.helpers.evaluator_per_round import MultiRoundEvaluator as Evaluator
 
     config["visual_movement"] = args.visual_movement
 

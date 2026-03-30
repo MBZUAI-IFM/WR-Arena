@@ -22,9 +22,9 @@ PATCHES_DIR="${SCRIPT_DIR}/worldscore_patches"
 echo "Installing WR-Arena patches into ${WS_ROOT} ..."
 
 # Modified evaluator (per-round evaluation without VFIMamba)
-cp "${PATCHES_DIR}/evaluator_per_round_arif.py" \
-   "${WS_ROOT}/worldscore/benchmark/helpers/evaluator_per_round_arif.py"
-echo "  copied evaluator_per_round_arif.py"
+cp "${PATCHES_DIR}/evaluator_per_round.py" \
+   "${WS_ROOT}/worldscore/benchmark/helpers/evaluator_per_round.py"
+echo "  copied evaluator_per_round.py"
 
 echo "Done. Patches installed successfully."
 echo ""
