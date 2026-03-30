@@ -183,7 +183,7 @@ After execution, check the results in the following paths:
 - **Structured**:  
   `outputs/simulative_reasoning_planning/structured_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
 
-Analyze the action sequences to determine whether the models successfully completed the tasks. For structured planning, ensure tasks are completed within the specified action limits.
+Analyze the action sequences to determine whether the models successfully completed the tasks.
 
 ## Smoothness Evaluation
 
