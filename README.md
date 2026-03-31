@@ -2,7 +2,7 @@
 A diagnostic tool and a guideline for advancing next-generation world models capable of robust understanding, forecasting, and purposeful action.
 
 <p align="center">
-    <img src="assets/evaluation_benchmark.png" width="500"/>
+    <img src="assets/evaluation_benchmark.png" width="850"/>
 </p>
 
 ## Table of Contents
