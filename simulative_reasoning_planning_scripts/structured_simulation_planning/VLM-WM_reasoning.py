@@ -26,10 +26,10 @@ SYSTEM_PROMPT = """You are an expert task planner for a stationary single-arm ro
   using the template  
   “<color> <shape> at <landmark>”  
   where  
-    ▸ <shape> ∈ {circle, square, triangle, cube, star, heart, hexagon, cylinder}  
-    ▸ <landmark> ∈ {top‑left corner, top‑right corner, bottom‑left corner,
+    ▸ <shape> ∈ (circle, square, triangle, cube, star, heart, hexagon, cylinder)  
+    ▸ <landmark> ∈ (top‑left corner, top‑right corner, bottom‑left corner,
                     bottom‑right corner, top edge, bottom edge, left edge,
-                    right edge, centre}.  
+                    right edge, centre).  
 • Do **not** output this list; it is for disambiguation only.
 ──────────────── Task Decomposition ────────────────
 Guidelines for Task Decomposition:
@@ -51,7 +51,7 @@ Important Notes:
 - Generate one step at a time. Finish with \"FINISHED\"
 - Every object reference must be uniquely identifiable from the current image or the action history.
 - Specify which object to operate. Use only facts. Do not use ambiguous description.
-- The maximum steps breakdown should not exceed 2 steps.
+- The maximum steps breakdown should not exceed {max_steps} steps.
 
 Example:
 
@@ -195,7 +195,7 @@ def get_full_action_list(
             max_retries=3,
             model=model,
             messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": SYSTEM_PROMPT.format(max_steps=max_steps)},
                 {"role": "user",   "content": [
                     {"type": "text", "text": f"Goal: {goal}\n"},
                     {"type": "text", "text": f"History: {json.dumps(history)}\n\n"},
@@ -475,7 +475,7 @@ def main() -> None:
         description="Generate, select, concat, and refine action‑driven videos in parallel.")
     parser.add_argument("--jobs_jsonl", required=True,
                         help="JSONL file; each line: {image_path, goal, output_dir, episode}")
-    parser.add_argument("--max_action", type=int, default=3, help="Maximum number of action steps")
+    parser.add_argument("--max_action", type=int, default=5, help="Maximum number of action steps")
     parser.add_argument("--best_of_n", type=int, default=3)
     parser.add_argument("--fps", type=int, default=20)
     parser.add_argument("--cosmos_version", type=str, choices=["cosmos1", "cosmos2"], default="cosmos1",

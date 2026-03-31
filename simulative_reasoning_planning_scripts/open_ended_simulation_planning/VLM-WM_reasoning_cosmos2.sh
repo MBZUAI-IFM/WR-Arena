@@ -19,7 +19,7 @@ cd ${PROJECT_ROOT}
 mkdir -p logs
 
 srun python simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning.py \
-  --jobs_jsonl datasets/simulative_reasoning_planning/open_ended_simulation_planning/one_sample.jsonl \
+  --jobs_jsonl datasets/simulative_reasoning_planning/open_ended_simulation_planning/samples.jsonl \
   --max_action 5 \
   --best_of_n 3 \
   --fps 16 \

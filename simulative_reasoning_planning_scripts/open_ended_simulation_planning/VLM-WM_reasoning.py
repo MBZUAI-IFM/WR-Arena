@@ -38,7 +38,7 @@ Important Notes:
 - Generate one step at a time. Do not put two actions in a single step.
 - Every object reference must be uniquely identifiable from the current image or the action history.
 - Specify which object to operate. Use only facts. Do not use ambiguous description.
-- The maximum steps breakdown should not exceed 5 steps.
+- The maximum steps breakdown should not exceed {max_steps} steps.
 - Do not use other objects included in the goal as a relative position reference. If asked to align objects in a line, don't simply say commands like 'place object A into a position that make objects align into a line' as this gives no information to the target position of the move. Instead you should mention this position clearly with respect to the background objects (e.g., table).
 
 Example:
@@ -207,7 +207,7 @@ def get_full_action_list(
             max_retries=3,
             model=model,
             messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": SYSTEM_PROMPT.format(max_steps=max_steps)},
                 {"role": "user",   "content": [
                     {"type": "text", "text": f"Goal: {goal}\n"},
                     {"type": "text", "text": f"History: {json.dumps(history)}\n\n"},
