@@ -10,7 +10,7 @@ A diagnostic tool and a guideline for advancing next-generation world models cap
 
 ## Action Simulation Fidelity
 
-This section evaluates the ability of video generation models to simulate actions faithfully based on given prompts.
+This section evaluates the ability of video generation models to simulate actions faithfully based on multi-round prompts.
 
 ### Supported Models
 
@@ -27,8 +27,6 @@ We evaluate multiple state-of-the-art video generation models, categorized into 
 6. **KLING**
 7. **MiniMax-Hailuo**
 8. **PAN** - Our proprietary model (requires custom endpoint, not yet publicly released)
-9. **Sora 2** 
-10. **Veo 3**
 
 ### Setup for Local Models
 
@@ -36,10 +34,10 @@ We evaluate multiple state-of-the-art video generation models, categorized into 
 
 For each model, create a dedicated conda environment and follow the installation instructions from their respective repositories:
 
-- **Cosmos-Predict1**: Follow setup instructions at https://github.com/nvidia-cosmos/cosmos-predict1 (environment name: `cosmos-predict1`)
-- **Cosmos-Predict2**: Follow setup instructions at https://github.com/nvidia-cosmos/cosmos-predict2 (environment name: `cosmos-predict2`)
-- **WAN 2.1**: Follow setup instructions at https://github.com/Wan-Video/Wan2.1 (environment name: `wan2_1`)
-- **Wan 2.2**: Follow setup instructions at https://github.com/Wan-Video/Wan2.2 (environment name: `wan2_2`)
+- **Cosmos-Predict1**: Follow setup instructions at [GitHub](https://github.com/nvidia-cosmos/cosmos-predict1) (env name: `cosmos-predict1`)
+- **Cosmos-Predict2**: Follow setup instructions at [GitHub](https://github.com/nvidia-cosmos/cosmos-predict2) (env name: `cosmos-predict2`)
+- **WAN 2.1**: Follow setup instructions at [GitHub](https://github.com/Wan-Video/Wan2.1) (env name: `wan2_1`)
+- **WAN 2.2**: Follow setup instructions at [GitHub](https://github.com/Wan-Video/Wan2.2) (env name: `wan2_2`)
 
 #### 2. Download Model Checkpoints
 
@@ -58,11 +56,8 @@ thirdparty/
 Execute the generation scripts using SLURM for local models:
 
 ```bash
-# Local Models
+# Local Models. Example:
 sbatch action_simulation_fidelity_scripts/cosmos1.sh
-sbatch action_simulation_fidelity_scripts/cosmos2.sh
-sbatch action_simulation_fidelity_scripts/wan2_1.sh
-sbatch action_simulation_fidelity_scripts/wan2_2.sh
 ```
 
 ### Setup for API-based Models
@@ -82,13 +77,8 @@ pip install -r requirements_api.txt
 Execute the generation scripts for API-based models:
 
 ```bash
-# API-based Models
+# API-based Models. Example:
 bash action_simulation_fidelity_scripts/gen3.sh
-bash action_simulation_fidelity_scripts/kling.sh
-bash action_simulation_fidelity_scripts/minimax.sh
-bash action_simulation_fidelity_scripts/pan.sh
-bash action_simulation_fidelity_scripts/sora2.sh
-bash action_simulation_fidelity_scripts/veo3.sh
 ```
 
 ### Evaluation
@@ -120,15 +110,11 @@ Both **Cosmos-Predict1** and **Cosmos-Predict2** models need to be fine-tuned on
 
 **Fine-tuning process**:
 
-1. Fine-tune each model on **both datasets**:
-   - Agibot for open-ended simulation planning  
-   - Language Table for structured simulation planning  
+1. Follow the respective model repository instructions for fine-tuning:
+   - [Cosmos-Predict1 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict1/blob/main/examples/post-training_diffusion_video2world.md)  
+   - [Cosmos-Predict2 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict2/blob/main/documentations/post-training_video2world.md)  
 
-2. Follow the respective model repository instructions for fine-tuning:
-   - [Cosmos-Predict1 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict1)  
-   - [Cosmos-Predict2 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict2)  
-
-3. Replace the original checkpoints with your fine-tuned versions in the `thirdparty/*/checkpoints/` directories.
+2. Replace the original checkpoints with your fine-tuned versions in the `thirdparty/*/checkpoints/` directories.
 
 ---
 
@@ -139,11 +125,8 @@ Run the evaluation scripts and check the generated results for both open-ended a
 **Open-ended Simulation Planning**:
 
 ```bash
-# Cosmos-Predict1
+# Example: Cosmos-Predict1
 sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh
-
-# Cosmos-Predict2
-sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos2.sh
 ```
 
 **Structured Simulation Planning**:
@@ -151,13 +134,11 @@ sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-
 Tasks may have a maximum of 5 or 10 actions:
 
 ```bash
-# Maximum 5 actions
+# Example: Maximum 5 actions
 sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_5.sh
-sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_5.sh
 
-# Maximum 10 actions
+# Example: Maximum 10 actions
 sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_10.sh
-sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos2_max_action_10.sh
 ```
 
 **Result Checking**:
