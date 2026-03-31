@@ -11,7 +11,7 @@ A diagnostic tool and a guideline for advancing next-generation world models cap
 - [Generation Consistency Evaluation](#generation-consistency-evaluation)
 - [Simulative Reasoning & Planning](#simulative-reasoning--planning)
 
-## Action Simulation Fidelity
+## 🔹 Action Simulation Fidelity
 
 This section evaluates the ability of video generation models to simulate actions faithfully based on multi-round prompts.
 
@@ -98,7 +98,7 @@ python action_simulation_fidelity_scripts/action_simulation_fidelity_eval.py \
 
 Results will be saved in `outputs/action_simulation_fidelity/MODEL_NAME/MODEL_NAME_results.json`.
 
-## Smoothness Evaluation
+## 🔹 Smoothness Evaluation
 
 This section evaluates the temporal smoothness of multi-round generated videos using optical flow. Consecutive frame pairs are processed with SEA-RAFT to compute velocity and acceleration magnitudes, which are combined into a smoothness score (`vmag × exp(−λ × amag)`).
 
@@ -136,7 +136,7 @@ python smoothness_eval_scripts/compute_smoothness_scores.py \
 
 Per-instance results are written to `outputs/smoothness_eval/pan_scores/{instance_id}/smoothness.json`. An aggregate `summary.json` is written once all instances are scored. For multi-node SLURM evaluation, set `MODEL_NAME` in `smoothness_eval_scripts/eval.sh` and run `sbatch smoothness_eval_scripts/eval.sh`.
 
-## Generation Consistency Evaluation
+## 🔹 Generation Consistency Evaluation
 
 This section evaluates video generation models on 7 aspects of multi-round generation consistency using the [WorldScore](https://github.com/haoyi-duan/WorldScore) benchmark framework (MIT License).
 
@@ -205,7 +205,7 @@ python generation_consistency_eval_scripts/run_evaluate_multiround.py \
 
 Results are written to `outputs/generation_consistency_eval/pan_eval/worldscore_output/worldscore_multiround.json`. For SLURM-based end-to-end runs, set `MODEL_NAME` in `generation_consistency_eval_scripts/eval.sh` and run `sbatch generation_consistency_eval_scripts/eval.sh`
 
-## Simulative Reasoning & Planning
+## 🔹 Simulative Reasoning & Planning
 
 This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks. Part of the code has been uploaded and the rest is currently being prepared.
 
