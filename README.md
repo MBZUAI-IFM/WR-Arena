@@ -7,10 +7,9 @@ A diagnostic tool and a guideline for advancing next-generation world models cap
 
 ## Table of Contents
 - [Action Simulation Fidelity](#action-simulation-fidelity)
-- [Simulative Reasoning & Planning](#simulative-reasoning--planning)
 - [Smoothness Evaluation](#smoothness-evaluation)
 - [Generation Consistency Evaluation](#generation-consistency-evaluation)
-
+- [Simulative Reasoning & Planning](#simulative-reasoning--planning)
 
 ## Action Simulation Fidelity
 
@@ -98,64 +97,6 @@ python action_simulation_fidelity_scripts/action_simulation_fidelity_eval.py \
 ```
 
 Results will be saved in `outputs/action_simulation_fidelity/MODEL_NAME/MODEL_NAME_results.json`.
-
-## Simulative Reasoning & Planning
-
-This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks. Part of the code has been uploaded and the rest is currently being prepared.
-
-### Fine-tuning Setup
-
-Both **Cosmos-Predict1** and **Cosmos-Predict2** models need to be fine-tuned on specific datasets for the evaluation tasks:
-
-| Task Type | Dataset | Models to Fine-tune | Purpose |
-|-----------|---------|-------------------|---------|
-| Open-ended Simulation Planning | Agibot World Colosseo – “A large-scale manipulation platform for scalable and intelligent embodied systems” (Bu et al., 2025) | Cosmos-Predict1, Cosmos-Predict2 | Enables open-ended reasoning about robotic manipulation tasks |
-| Structured Simulation Planning | Language Table – “Interactive language: Talking to robots in real time” (Lynch et al., 2023) | Cosmos-Predict1, Cosmos-Predict2 | Enables structured reasoning with specific action constraints |
-
-**Fine-tuning process**:
-
-1. Follow the respective model repository instructions for fine-tuning:
-   - [Cosmos-Predict1 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict1/blob/main/examples/post-training_diffusion_video2world.md)  
-   - [Cosmos-Predict2 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict2/blob/main/documentations/post-training_video2world.md)  
-
-2. Replace the original checkpoints with your fine-tuned versions in the `thirdparty/*/checkpoints/` directories.
-
----
-
-### Evaluation & Results
-
-Run the evaluation scripts and check the generated results for both open-ended and structured simulation planning.
-
-**Open-ended Simulation Planning**:
-
-```bash
-# Example: Cosmos-Predict1
-sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh
-```
-
-**Structured Simulation Planning**:
-
-Tasks may have a maximum of 5 or 10 actions:
-
-```bash
-# Example: Maximum 5 actions
-sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_5.sh
-
-# Example: Maximum 10 actions
-sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_10.sh
-```
-
-**Result Checking**:
-
-After execution, check the results in the following paths:
-
-- **Open-ended**:  
-  `outputs/simulative_reasoning_planning/open_ended_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
-
-- **Structured**:  
-  `outputs/simulative_reasoning_planning/structured_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
-
-Analyze the action sequences to determine whether the models successfully completed the tasks.
 
 ## Smoothness Evaluation
 
@@ -263,3 +204,61 @@ python generation_consistency_eval_scripts/run_evaluate_multiround.py \
 ```
 
 Results are written to `outputs/generation_consistency_eval/pan_eval/worldscore_output/worldscore_multiround.json`. For SLURM-based end-to-end runs, set `MODEL_NAME` in `generation_consistency_eval_scripts/eval.sh` and run `sbatch generation_consistency_eval_scripts/eval.sh`
+
+## Simulative Reasoning & Planning
+
+This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks. Part of the code has been uploaded and the rest is currently being prepared.
+
+### Fine-tuning Setup
+
+Both **Cosmos-Predict1** and **Cosmos-Predict2** models need to be fine-tuned on specific datasets for the evaluation tasks:
+
+| Task Type | Dataset | Models to Fine-tune | Purpose |
+|-----------|---------|-------------------|---------|
+| Open-ended Simulation Planning | Agibot World Colosseo – “A large-scale manipulation platform for scalable and intelligent embodied systems” (Bu et al., 2025) | Cosmos-Predict1, Cosmos-Predict2 | Enables open-ended reasoning about robotic manipulation tasks |
+| Structured Simulation Planning | Language Table – “Interactive language: Talking to robots in real time” (Lynch et al., 2023) | Cosmos-Predict1, Cosmos-Predict2 | Enables structured reasoning with specific action constraints |
+
+**Fine-tuning process**:
+
+1. Follow the respective model repository instructions for fine-tuning:
+   - [Cosmos-Predict1 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict1/blob/main/examples/post-training_diffusion_video2world.md)  
+   - [Cosmos-Predict2 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict2/blob/main/documentations/post-training_video2world.md)  
+
+2. Replace the original checkpoints with your fine-tuned versions in the `thirdparty/*/checkpoints/` directories.
+
+---
+
+### Evaluation & Results
+
+Run the evaluation scripts and check the generated results for both open-ended and structured simulation planning.
+
+**Open-ended Simulation Planning**:
+
+```bash
+# Example: Cosmos-Predict1
+sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh
+```
+
+**Structured Simulation Planning**:
+
+Tasks may have a maximum of 5 or 10 actions:
+
+```bash
+# Example: Maximum 5 actions
+sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_5.sh
+
+# Example: Maximum 10 actions
+sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_10.sh
+```
+
+**Result Checking**:
+
+After execution, check the results in the following paths:
+
+- **Open-ended**:  
+  `outputs/simulative_reasoning_planning/open_ended_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
+
+- **Structured**:  
+  `outputs/simulative_reasoning_planning/structured_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
+
+Analyze the action sequences to determine whether the models successfully completed the tasks.
