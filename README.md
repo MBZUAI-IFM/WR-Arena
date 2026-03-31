@@ -103,17 +103,6 @@ python action_simulation_fidelity_scripts/action_simulation_fidelity_eval.py \
     --save_name MODEL_NAME
 ```
 
-**Examples:**
-
-```bash
-# Evaluate PAN
-python action_simulation_fidelity_scripts/action_simulation_fidelity_eval.py \
-    --openai_api_key YOUR_KEY \
-    --base_path outputs/action_simulation_fidelity/pan \
-    --dataset_json datasets/action_simulation_fidelity_subset/samples_subset.json \
-    --save_name pan
-```
-
 Results will be saved in `outputs/action_simulation_fidelity/MODEL_NAME/MODEL_NAME_results.json`.
 
 ## Simulative Reasoning & Planning
