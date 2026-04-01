@@ -232,23 +232,10 @@ Both **Cosmos-Predict1** and **Cosmos-Predict2** models need to be fine-tuned on
 
 Run the evaluation scripts and check the generated results for both open-ended and structured simulation planning.
 
-**Open-ended Simulation Planning**:
-
 ```bash
 # Example: Cosmos-Predict1
 sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh
-```
-
-**Structured Simulation Planning**:
-
-Tasks may have a maximum of 5 or 10 actions:
-
-```bash
-# Example: Maximum 5 actions
-sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_5.sh
-
-# Example: Maximum 10 actions
-sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1_max_action_10.sh
+sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1.sh
 ```
 
 **Result Checking**:
