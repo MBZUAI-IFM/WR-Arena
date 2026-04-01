@@ -114,8 +114,6 @@ def main():
     parser = argparse.ArgumentParser(description='Process VLM-only planning tasks')
     parser.add_argument('--dataset_path', type=str, required=True,
                         help='Path to the dataset JSONL file')
-    parser.add_argument('--max_steps', type=int, default=5,
-                        help='Maximum number of planning steps (default: 5)')
     parser.add_argument('--openai_api_key', type=str, required=True,
                         help='OpenAI API key')
     
@@ -127,15 +125,17 @@ def main():
     # Load dataset
     cases = load_dataset(args.dataset_path)
     
-    print(f"Processing {len(cases)} cases with max_steps={args.max_steps}...")
+    print(f"Processing {len(cases)} cases...")
     
     # Process each case
     for i, case in enumerate(cases, 1):
-        print(f"Processing case {i}/{len(cases)}: {case['episode']}")
+        # Get max_action from case, default to 5 if not specified
+        max_action = case.get("max_action", 5)
+        print(f"Processing case {i}/{len(cases)}: {case['episode']} (max_steps={max_action})")
         
         try:
             # Process the case
-            result = process_single_case(case, args.max_steps)
+            result = process_single_case(case, max_action)
             
             # Save result
             output_path = os.path.join(case["output_dir"], "VLM_only.json")
