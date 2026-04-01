@@ -72,6 +72,7 @@ For models that use API calls:
 ```bash
 conda create -n video-api python=3.10 -y
 conda activate video-api
+conda install -c conda-forge ffmpeg
 pip install -r requirements_api.txt
 ```
 
