@@ -15,3 +15,5 @@ mediapy
 openai
 google-genai
 mmengine
+ftfy
+regex
