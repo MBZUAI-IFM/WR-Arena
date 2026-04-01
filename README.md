@@ -13,11 +13,11 @@ A diagnostic tool and a guideline for advancing next-generation world models cap
 
 ## 🔹 Action Simulation Fidelity
 
-This section evaluates the ability of video generation models to simulate actions faithfully based on multi-round prompts.
+This section evaluates the ability of world models to simulate actions faithfully based on multi-round prompts.
 
 ### Supported Models
 
-We evaluate multiple state-of-the-art video generation models, categorized into local models and API-based models:
+We evaluate multiple state-of-the-art world models, categorized into local models and API-based models:
 
 #### Local Models (require local setup and checkpoints):
 1. **Cosmos-Predict1-14B-Video2World** - [GitHub](https://github.com/nvidia-cosmos/cosmos-predict1)
