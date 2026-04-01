@@ -18,9 +18,8 @@ conda activate cosmos-predict1
 cd ${PROJECT_ROOT}
 mkdir -p logs
 
-srun python simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning.py \
-  --jobs_jsonl datasets/simulative_reasoning_planning/structured_simulation_planning/samples_max_action_5.jsonl \
-  --max_action 5 \
+srun python simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos.py \
+  --jobs_jsonl datasets/simulative_reasoning_planning/structured_simulation_planning/samples.jsonl \
   --best_of_n 3 \
   --fps 24 \
   --cosmos_version cosmos1 \

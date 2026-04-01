@@ -101,7 +101,7 @@ Action: ["Move the red cylinder to the left of the blue square", "Move the yello
   Justification: The yellow hexagon is at the left of the red cylinder. And the red cylinder is at the left of the blue square. The frame demonstrates output of action sequence."""
 
 PROJECT_ROOT = os.environ.get("PROJECT_ROOT", Path(__file__).parent.parent)
-PANWAN_SCRIPT = Path(PROJECT_ROOT) / "simulative_reasoning_planning_scripts" / "structured_simulation_planning" / "variant_generation.py"
+PANWAN_SCRIPT = Path(PROJECT_ROOT) / "simulative_reasoning_planning_scripts" / "structured_simulation_planning" / "variant_generation_cosmos.py"
 
 # Encode a frame as base64 PNG
 def encode_frame_to_b64(frame: np.ndarray) -> str:
@@ -447,10 +447,11 @@ def run_single_job(job: Dict[str, Any], args: argparse.Namespace, gpu_id: Option
             out_dir = Path(job["output_dir"])
             goal = job["goal"]
             episode = job.get("episode", img_path.stem)
+            max_action = job.get("max_action", 5)  # Get max_action from job, default to 5
             out_dir.mkdir(parents=True, exist_ok=True)
-            print("[DEBUG]: start initial planning")
+            print(f"[DEBUG]: start initial planning for episode {episode} with max_action={max_action}")
             
-            action_list, chosen_segments = get_full_action_list(episode, max_steps = args.max_action, initial_frame_path = img_path, goal = goal, history = [], out_dir = out_dir, fps = args.fps, best_of_n = args.best_of_n, cosmos_version = args.cosmos_version)
+            action_list, chosen_segments = get_full_action_list(episode, max_steps = max_action, initial_frame_path = img_path, goal = goal, history = [], out_dir = out_dir, fps = args.fps, best_of_n = args.best_of_n, cosmos_version = args.cosmos_version)
             print(f"action_list:{action_list}")
             
             full_video = out_dir / f"{episode}_full.mp4"
@@ -474,8 +475,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate, select, concat, and refine action‑driven videos in parallel.")
     parser.add_argument("--jobs_jsonl", required=True,
-                        help="JSONL file; each line: {image_path, goal, output_dir, episode}")
-    parser.add_argument("--max_action", type=int, default=5, help="Maximum number of action steps")
+                        help="JSONL file; each line: {image_path, goal, output_dir, episode, max_action}")
     parser.add_argument("--best_of_n", type=int, default=3)
     parser.add_argument("--fps", type=int, default=20)
     parser.add_argument("--cosmos_version", type=str, choices=["cosmos1", "cosmos2"], default="cosmos1",
