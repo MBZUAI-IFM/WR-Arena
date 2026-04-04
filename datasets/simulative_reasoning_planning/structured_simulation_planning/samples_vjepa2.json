@@ -1,0 +1,322 @@
+[
+    {
+      "episode": "initially_scattered_1",
+      "goal": "Arrange all blocks in a line.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1/Arrange_all_blocks_in_a_line",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/1.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_2",
+      "goal": "Arrange all blocks in a line.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2/Arrange_all_blocks_in_a_line",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/2.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_3",
+      "goal": "Arrange all blocks in a line.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3/Arrange_all_blocks_in_a_line",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/3.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_4",
+      "goal": "Arrange all blocks in a line.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4/Arrange_all_blocks_in_a_line",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/4.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_5",
+      "goal": "Arrange all blocks in a line.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5/Arrange_all_blocks_in_a_line",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/5.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_1",
+      "goal": "Gather all blocks at the bottom-right corner.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1/Gather_all_blocks_at_the_bottom-right_corner_",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/6.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_2",
+      "goal": "Gather all blocks at the bottom-right corner.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2/Gather_all_blocks_at_the_bottom-right_corner_",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/7.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_3",
+      "goal": "Gather all blocks at the bottom-right corner.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3/Gather_all_blocks_at_the_bottom-right_corner_",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/8.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_4",
+      "goal": "Gather all blocks at the bottom-right corner.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4/Gather_all_blocks_at_the_bottom-right_corner_",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/9.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_5",
+      "goal": "Gather all blocks at the bottom-right corner.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5/Gather_all_blocks_at_the_bottom-right_corner_",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/10.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_1",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/11.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_2",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/12.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_3",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/13.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_4",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/14.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_5",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/15.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_1",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_1/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/16.png",
+      "max_action": 5
+    },
+    {
+      "episode": "initially_scattered_2",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_2/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/17.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_3",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_3/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/18.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_4",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_4/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/19.png",
+      "max_action": 10
+    },
+    {
+      "episode": "initially_scattered_5",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/initially_scattered_5/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/20.png",
+      "max_action": 10
+    },
+    {
+      "episode": "near_circular_1",
+      "goal": "Arrange all blocks in a circle shape.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_circular_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_circular_1/Arrange_all_blocks_in_a_circle_shape",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/21.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_circular_2",
+      "goal": "Arrange all blocks in a circle shape.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_circular_2.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_circular_2/Arrange_all_blocks_in_a_circle_shape",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/22.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_circular_3",
+      "goal": "Arrange all blocks in a circle shape.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_circular_3.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_circular_3/Arrange_all_blocks_in_a_circle_shape",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/23.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_1",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_1/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/24.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_2",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_2.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_2/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/25.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_3",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_3.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_3/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/26.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_4",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_4.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_4/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/27.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_5",
+      "goal": "Make all blocks into a cluster",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_5.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_5/Make_all_blocks_into_a_cluster",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/28.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_1",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_1/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/29.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_2",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_2.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_2/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/30.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_3",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_3.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_3/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/31.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_clustered_5",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_clustered_5.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_clustered_5/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/32.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_1",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_1.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_1/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/33.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_4",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_4.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_4/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/34.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_5",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_5.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_5/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/35.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_7",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_7.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_7/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/36.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_8",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_8.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_8/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/37.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_9",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_9.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_9/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/38.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_15",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_15.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_15/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/39.png",
+      "max_action": 5
+    },
+    {
+      "episode": "near_grouped_17",
+      "goal": "Group all blocks by color.",
+      "input_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/near_grouped_17.png",
+      "output_dir": "outputs/simulative_reasoning_planning/structured_simulation_planning/near_grouped_17/Group_all_blocks_by_color",
+      "goal_state": "datasets/simulative_reasoning_planning/structured_simulation_planning/goal_state/40.png",
+      "max_action": 5
+    }
+  ]
