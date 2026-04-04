@@ -112,15 +112,16 @@ def save_result(result, output_path):
 def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Process VLM-only planning tasks')
-    parser.add_argument('--dataset_path', type=str, required=True,
+    parser.add_argument('--dataset_path', type=str,
+                        default='datasets/simulative_reasoning_planning/open_ended_simulation_planning/samples.jsonl',
                         help='Path to the dataset JSONL file')
-    parser.add_argument('--openai_api_key', type=str, required=True,
+    parser.add_argument('--openai_key', type=str, required=True,
                         help='OpenAI API key')
     
     args = parser.parse_args()
     
     # Set OpenAI API key
-    openai.api_key = args.openai_api_key
+    openai.api_key = args.openai_key
     
     # Load dataset
     cases = load_dataset(args.dataset_path)
@@ -137,8 +138,8 @@ def main():
             # Process the case
             result = process_single_case(case, max_action)
             
-            # Save result
-            output_path = os.path.join(case["output_dir"], "VLM_only.json")
+            # Save result with VLM_only subdirectory and episode name
+            output_path = os.path.join(case["output_dir"], "VLM_only", f"{case['episode']}_refined.json")
             save_result(result, output_path)
             
             print(f"Saved result to: {output_path}")
