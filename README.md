@@ -208,45 +208,80 @@ Results are written to `outputs/generation_consistency_eval/pan_eval/worldscore_
 
 ## 🔹 Simulative Reasoning & Planning
 
-This section evaluates video generation models on their ability to perform simulative reasoning and planning for robotic tasks. Part of the code has been uploaded and the rest is currently being prepared.
+This section evaluates evaluates whether a world model can serve as an internal simulator that enables an agent to reason about actions and plan toward a goal.
 
 ### Fine-tuning Setup
 
 Both **Cosmos-Predict1** and **Cosmos-Predict2** models need to be fine-tuned on specific datasets for the evaluation tasks:
 
-| Task Type | Dataset | Models to Fine-tune | Purpose |
-|-----------|---------|-------------------|---------|
-| Open-ended Simulation Planning | Agibot World Colosseo – “A large-scale manipulation platform for scalable and intelligent embodied systems” (Bu et al., 2025) | Cosmos-Predict1, Cosmos-Predict2 | Enables open-ended reasoning about robotic manipulation tasks |
-| Structured Simulation Planning | Language Table – “Interactive language: Talking to robots in real time” (Lynch et al., 2023) | Cosmos-Predict1, Cosmos-Predict2 | Enables structured reasoning with specific action constraints |
+| Task Type | Dataset | Models to Fine-tune |
+|-----------|---------|-------------------|
+| Step-Wise Simulation<br>Open-ended Simulation Planning | Agibot World Colosseo – “A large-scale manipulation platform for scalable and intelligent embodied systems” (Bu et al., 2025) | Cosmos-Predict1<br>Cosmos-Predict2<br>V-JEPA2<br>PAN |
+| Structured Simulation Planning | Language Table – “Interactive language: Talking to robots in real time” (Lynch et al., 2023) | Cosmos-Predict1<br>Cosmos-Predict2<br>V-JEPA2<br>PAN |
 
 **Fine-tuning process**:
 
 1. Follow the respective model repository instructions for fine-tuning:
    - [Cosmos-Predict1 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict1/blob/main/examples/post-training_diffusion_video2world.md)  
-   - [Cosmos-Predict2 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict2/blob/main/documentations/post-training_video2world.md)  
+   - [Cosmos-Predict2 Fine-tuning](https://github.com/nvidia-cosmos/cosmos-predict2/blob/main/documentations/post-training_video2world.md)
+   - [V-JEPA2 Conda Env Creating and Fine-tuning](https://github.com/facebookresearch/vjepa2) 
+   - PAN (yet to be released)
 
 2. Replace the original checkpoints with your fine-tuned versions in the `thirdparty/*/checkpoints/` directories.
 
 ---
-
-### Evaluation & Results
-
-Run the evaluation scripts and check the generated results for both open-ended and structured simulation planning.
+### Step-Wise Simulation
+This task measures whether a world model can accurately predict the immediate consequence of a given action within a manipulation context.
+Run the evaluation scripts for all models (Cosmos-predict1, Cosmos-predict2, V-JEPA2, and PAN):
 
 ```bash
 # Example: Cosmos-Predict1
-sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh
-sbatch simulative_reasoning_planning_scripts/structured_simulation_planning/VLM-WM_reasoning_cosmos1.sh
+sbatch simulative_reasoning_planning_scripts/step_wise_simulation_scripts/cosmos1.sh
 ```
 
-**Result Checking**:
+**Evaluation Methods:**
 
-After execution, check the results in the following paths:
+- **Video Generation Models (Cosmos-predict1, Cosmos-predict2, PAN)**: Manually evaluate whether the generated videos in `outputs/simulative_reasoning_planning/step_wise_simulation/{model_name}/` fulfill the given prompts.
 
-- **Open-ended**:  
-  `outputs/simulative_reasoning_planning/open_ended_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
+- **V-JEPA2**: Check the quantitative results in `outputs/simulative_reasoning_planning/step_wise_simulation/vjepa2/subset.jsonl` to see if the inference predictions match the ground truth answers.
 
-- **Structured**:  
-  `outputs/simulative_reasoning_planning/structured_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json`  
 
-Analyze the action sequences to determine whether the models successfully completed the tasks.
+### Open-Ended Simulation and Planning
+This setting evaluates goal-directed manipulation on diverse objects in open-ended environments.
+VLM-only serves as the baseline that uses only VLM reasoning (e.g., GPT-o3) to evaluate how much world models can enhance performance.
+Run the evaluation scripts for different model configurations:
+
+**VLM-only Baseline:**
+```bash
+# Pure VLM reasoning
+python simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM_only.py --openai_key your_api_key
+```
+
+**VLM + World Model Combinations:**
+```bash
+# VLM + V-JEPA2
+python simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_vjepa2.py --openai_key your_api_key
+
+# VLM + Cosmos-Predict1
+sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos1.sh
+
+# VLM + Cosmos-Predict2
+sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_cosmos2.sh
+
+# VLM + PAN
+sbatch simulative_reasoning_planning_scripts/open_ended_simulation_planning/VLM-WM_reasoning_pan.sh
+```
+
+**Result Analysis:**
+
+After execution, check the results in:
+```
+outputs/simulative_reasoning_planning/open_ended_simulation_planning/[task_name]/[model_name]/[task_name]_refined.json
+```
+
+Manually analyze the generated action sequences to determine whether each model successfully completed the given tasks.
+
+### Structured Simulation and Planning
+This setting focuses on precise, language-grounded manipulation in highly structured tabletop environments containing regular objects such as colored cubes and spheres.
+
+The evaluation procedure follows the same methodology as described in the Open-Ended Simulation and Planning section.
