@@ -316,11 +316,11 @@ for item in data:
         "max_action": item['max_action']
     })
     
-
-max_steps=5
+    
 system_prompt = SYSTEM_PROMPT
 for sample in tqdm(processed_data, desc="Processing samples"):
     #  3. get first/goal frame representation
+    max_steps = sample["max_action"]
     text_instruction = sample["goal"]
     text_instruction = tokenizer(text_instruction, return_tensors="pt", padding="max_length", truncation=True, max_length=32)
     text_input_ids, mask = text_instruction.input_ids[0], text_instruction.attention_mask[0]
@@ -343,7 +343,7 @@ for sample in tqdm(processed_data, desc="Processing samples"):
     history = []
     intermidiate_frame = first_frame_rep
     for step in range(max_steps):
-        canditate_actions = get_candidate_action(image_path = sample["image_path"], goal = sample["goal"], system_prompt = system_prompt, history=history)
+        canditate_actions = get_candidate_action(image_path = sample["image_path"], goal = sample["goal"], system_prompt = system_prompt.format(max_steps=max_steps), history=history)
         _, best_action, intermidiate_frame = infer_correct_action(intermidiate_frame, canditate_actions, goal_frame_rep, N=10)
         history.append(best_action)
     
