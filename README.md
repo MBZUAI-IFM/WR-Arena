@@ -216,7 +216,7 @@ All models, including **Cosmos-Predict1**, **Cosmos-Predict2**, **V-JEPA2**, **P
 
 | Task Type | Dataset | Models to Fine-tune |
 |-----------|---------|-------------------|
-| Step-Wise Simulation<br>Open-ended Simulation Planning | Agibot World Colosseo – “A large-scale manipulation platform<br>for scalable and intelligent embodied systems” (Bu et al., 2025) | Cosmos-Predict1<br>Cosmos-Predict2<br>V-JEPA2<br>PAN |
+| Step-Wise Simulation<br>Open-ended Simulation Planning | Agibot World Colosseo – “A large-scale manipulation<br>platform for scalable and intelligent embodied systems” (Bu et al., 2025) | Cosmos-Predict1<br>Cosmos-Predict2<br>V-JEPA2<br>PAN |
 | Structured Simulation Planning | Language Table – “Interactive language: <br>Talking to robots in real time” (Lynch et al., 2023) | Cosmos-Predict1<br>Cosmos-Predict2<br>V-JEPA2<br>PAN |
 
 **Fine-tuning process**:
