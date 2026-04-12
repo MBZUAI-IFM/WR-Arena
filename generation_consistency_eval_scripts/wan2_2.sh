@@ -11,7 +11,7 @@
 #SBATCH --exclusive
 
 export PROJECT_ROOT=$SLURM_SUBMIT_DIR
-export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root
+export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root, for example: ${PROJECT_ROOT}/datasets/generation_consistency_eval
 
 MODEL_NAME="wan2_2"
 DATASET_JSON="${PROJECT_ROOT}/datasets/generation_consistency_eval/samples.json"

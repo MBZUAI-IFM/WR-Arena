@@ -1,6 +1,6 @@
 #!/bin/bash
 export PROJECT_ROOT=${SLURM_SUBMIT_DIR:-$(pwd)}
-export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root
+export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root, for example: ${PROJECT_ROOT}/datasets/generation_consistency_eval
 export KLING_API_KEY="Your_kling_api_key"
 
 MODEL_NAME="kling"

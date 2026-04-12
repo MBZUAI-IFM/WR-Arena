@@ -1,6 +1,6 @@
 #!/bin/bash
 export PROJECT_ROOT=${SLURM_SUBMIT_DIR:-$(pwd)}
-export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root
+export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root, for example: ${PROJECT_ROOT}/datasets/generation_consistency_eval
 export END_POINT="pan_endpoint"
 export OPENAI_KEY="Your_api_key"
 

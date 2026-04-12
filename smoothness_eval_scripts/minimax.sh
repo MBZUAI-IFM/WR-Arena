@@ -1,6 +1,6 @@
 #!/bin/bash
 export PROJECT_ROOT=${SLURM_SUBMIT_DIR:-$(pwd)}
-export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root
+export IMAGE_ROOT="/path/to/WorldScore-Dataset"  # set to your local image root, for example: ${PROJECT_ROOT}/datasets/smoothness_eval
 export MINIMAX_API_KEY="Your_api_key"
 export MINIMAX_GROUP_ID="Your_group_id"
 
