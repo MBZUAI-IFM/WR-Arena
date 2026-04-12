@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=main
-#SBATCH --job-name=f_parallel
+#SBATCH --job-name=structured_cosmos1
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
 #SBATCH --qos=wm

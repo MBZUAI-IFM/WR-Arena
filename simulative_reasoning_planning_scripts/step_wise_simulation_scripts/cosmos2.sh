@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=f_video_gen
+#SBATCH --job-name=step_wise_cosmos2
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
 #SBATCH --partition=main

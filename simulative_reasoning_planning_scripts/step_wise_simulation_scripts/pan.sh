@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=main
-#SBATCH --job-name="d_pbench_gen_demo_xdit"
+#SBATCH --job-name=step_wise_pan
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
 #SBATCH --qos=wm

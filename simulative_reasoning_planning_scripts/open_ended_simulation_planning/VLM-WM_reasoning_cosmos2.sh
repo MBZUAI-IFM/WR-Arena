@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=main
-#SBATCH --job-name=f_parallel
+#SBATCH --job-name=open_ended_cosmos2
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
 #SBATCH --qos=wm

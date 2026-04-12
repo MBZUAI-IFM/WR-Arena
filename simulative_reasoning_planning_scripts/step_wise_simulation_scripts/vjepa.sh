@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=f_vjepa_inference
+#SBATCH --job-name=step_wise_vjepa
 #SBATCH --partition=main       
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
