@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=f_video
+#SBATCH --job-name=asf_cosmos1
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
 #SBATCH --partition=main
