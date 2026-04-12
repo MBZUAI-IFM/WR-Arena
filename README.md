@@ -105,7 +105,7 @@ This section evaluates the temporal smoothness of multi-round generated videos u
 
 ### Dataset
 
-`datasets/smoothness_eval/samples.json` contains 100 photorealistic outdoor scenes, each with a 10-round sequential prompt list. Reference images are not bundled — set `IMAGE_ROOT` in the generation scripts to point to your local copy of the WorldScore-Dataset.
+`datasets/smoothness_eval/samples.json` contains 100 photorealistic outdoor scenes, each with a 10-round sequential prompt list. A small subset of reference images is uploaded — set `IMAGE_ROOT` in the generation scripts to point to your local copy of the WorldScore-Dataset.
 
 ### Setup: Download SEA-RAFT Checkpoint
 
